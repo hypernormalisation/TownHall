@@ -37,4 +37,3 @@ dependencies:
   - xz=5.2.5=h7f8727e_1
   - yarl=1.7.2=py38h0a891b7_2
   - zlib=1.2.12=h7f8727e_2
-prefix: /home/sogilvy/miniconda3/envs/townhall_bot
