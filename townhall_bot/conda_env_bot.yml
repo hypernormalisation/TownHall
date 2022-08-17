@@ -1,0 +1,40 @@
+name: townhall_bot
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - aiohttp=3.7.4.post0=py38h497a2fe_1
+  - async-timeout=3.0.1=py_1000
+  - attrs=22.1.0=pyh71513ae_1
+  - ca-certificates=2022.4.26=h06a4308_0
+  - certifi=2022.6.15=py38h06a4308_0
+  - chardet=4.0.0=py38h578d9bd_3
+  - discord.py=1.7.3=pyhd8ed1ab_0
+  - greenlet=1.1.1=py38h295c915_0
+  - idna=3.3=pyhd8ed1ab_0
+  - ld_impl_linux-64=2.38=h1181459_1
+  - libffi=3.3=he6710b0_2
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - multidict=6.0.2=py38h0a891b7_1
+  - ncurses=6.3=h5eee18b_3
+  - openssl=1.1.1o=h7f8727e_0
+  - pip=22.1.2=py38h06a4308_0
+  - python=3.8.13=h12debd9_0
+  - python_abi=3.8=2_cp38
+  - readline=8.1.2=h7f8727e_1
+  - setuptools=61.2.0=py38h06a4308_0
+  - sqlalchemy=1.4.32=py38h7f8727e_0
+  - sqlite=3.39.2=h5082296_0
+  - tk=8.6.12=h1ccaba5_0
+  - typing-extensions=4.3.0=hd8ed1ab_0
+  - typing_extensions=4.3.0=pyha770c72_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - xz=5.2.5=h7f8727e_1
+  - yarl=1.7.2=py38h0a891b7_2
+  - zlib=1.2.12=h7f8727e_2
+prefix: /home/sogilvy/miniconda3/envs/townhall_bot
