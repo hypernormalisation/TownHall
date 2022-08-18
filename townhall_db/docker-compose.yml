@@ -12,10 +12,10 @@ services:
       POSTGRES_PASSWORD: secret
       PGDATA: /var/lib/postgresql/data
     volumes:
-      - townhalldb-app-db-data:/var/lib/postgresql/data/  # persist data even if container shuts down
+      - postgres_data:/var/lib/postgresql/data/  # persist data even if container shuts down
       - ./db_init_scripts:/docker-entrypoint-initdb.d/  # schema creation
     ports:
       - "5432:5432"
 
 volumes:
-  townhalldb-app-db-data:
+  postgres_data:

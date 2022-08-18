@@ -12,21 +12,27 @@ from dotenv import load_dotenv
 # Load the bot token from the .env file.
 load_dotenv()
 my_bot_token = os.environ.get('bot_token')
-
 client = discord.Client()
 
 
-@client.event
-async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
+test_embed = discord.Embed(
+    title='Townhall',
+    url='https://github.com/hypernormalisation/TownHall',
+    description="Townhall is a Discord bot to handle your realm's guild organisation needs.",
+    color=discord.Color.red()
+)
+
+bot = discord.Bot()
 
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+@bot.slash_command()
+async def hello(ctx, name: str = None):
+    name = name or ctx.author.name
+    await ctx.respond(f"Hello {name}!")
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
 
-client.run(my_bot_token)
+@bot.user_command(name="Say Hello")
+async def hi(ctx, user):
+    await ctx.respond(f"{ctx.author.mention} says hello to {user.name}!")
+
+bot.run(my_bot_token)

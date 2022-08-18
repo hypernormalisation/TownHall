@@ -1,4 +1,4 @@
-name: townhall_bot
+name: townhall_bot_discordpy
 channels:
   - anaconda
   - conda-forge
