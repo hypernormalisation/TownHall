@@ -4,9 +4,17 @@ Module to contain mappings and allowed values for data to be stored in the postg
 """
 import discord
 
+# Class color hexes
 color_druid = 0xFF7C0A
+color_dk = 0xC41E3A
+color_hunter = 0xAAD372
+color_mage = 0x3FC7EB
+color_paladin = 0xF48CBA
+color_priest = 0xFFFFFF
 color_rogue = 0xFFF468
-
+color_shaman = 0x0070DD
+color_warlock = 0x8788EE
+color_warrior = 0xC69B6D
 
 # The vacancy sql labels vs the options presented to the player
 vacancy_mapping = {
@@ -46,6 +54,34 @@ vacancy_mapping = {
     "mm_hunter": "Marksman Hunter",
     "surv_hunter": "Survival Hunter",
 
+    "arcane_mage": "Arcane Mage",
+    "fire_mage": "Fire Mage",
+    "frost_mage": "Frost Mage",
+
+    "holy_paladin": "Holy Paladin",
+    "prot_paladin": "Prot Paladin",
+    "ret_paladin": "Retribution Paladins",
+
+    "disc_priest": "Disc Priest",
+    "holy_priest": "Holy Priest",
+    "shadow_priest": "Shadow Priest",
+
+    "assassin_rogue": "Assassination Rogue",
+    "combat_rogue": "Combat Rogue",
+    "sub_rogue": "Subtlety Rogue",
+
+    "ele_shaman": "Elemental Shaman",
+    "enhance_shaman": "Enhancement Shaman",
+    "resto_shaman": "Resto Shaman",
+
+    "affli_warlock": "Affliction Warlock",
+    "demo_warlock": "Demonology Warlock",
+    "destro_warlock": "Destruction Warlock",
+
+    "dps_warrior": "DPS Warrior",
+    "arm_warrior": "Arms Warrior",
+    "fury_warrior": "Fury Warrior",
+    "prot_warrior": "Prot Warrior",
 
 }
 
@@ -57,10 +93,26 @@ def get_color_from_label(label):
     """Function to get the relevant class color from a class/spec label."""
 
     label = label.lower()
-    if 'druid' in label:
+    if 'knight' in label:
+        return color_dk
+    elif 'druid' in label:
         return color_druid
+    elif 'hunter' in label:
+        return color_hunter
+    elif 'mage' in label:
+        return color_mage
+    elif 'paladin' in label:
+        return color_paladin
+    elif 'priest' in label:
+        return color_priest
     elif 'rogue' in label:
         return color_rogue
+    elif 'shaman' in label:
+        return color_shaman
+    elif 'warlock' in label:
+        return color_warlock
+    elif 'warrior' in label:
+        return color_warrior
 
     # Finally return a default if no special match.
     return discord.Color.blurple()

@@ -142,9 +142,12 @@ async def vacancy_check(
     ctx: discord.ApplicationContext,
     label: str,
 ):
+    color = mappings.get_color_from_label(label)
+    if not color:
+        await ctx.respond('Please match a vacancy category!', ephemeral=True)
     test_embed = discord.Embed(
         title=f'Showing {label} vacancies:',
-        color=mappings.get_color_from_label(label)
+        color=color
     )
     await ctx.respond(embed=test_embed, ephemeral=True)
 

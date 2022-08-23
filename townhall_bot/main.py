@@ -18,7 +18,7 @@ client = discord.Client()
 test_embed = discord.Embed(
     title='Townhall',
     url='https://github.com/hypernormalisation/TownHall',
-    description="Townhall is a Discord bot to handle your realm's guild organisation needs.",
+    description="Townhall is a Discord bot to handle WoW Classic guild organisation needs.",
     color=discord.Color.red()
 )
 

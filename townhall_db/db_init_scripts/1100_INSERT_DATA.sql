@@ -3,13 +3,17 @@ insert into guilds (
     guild_type,
     faction,
     gm_id,
-    discord_url
+    discord_url,
+    realm,
+    region
 ) values(
     'HIVE',
     'Semi-HC',
     'Horde',
     12345,
-    'https://discord.gg/lightclubtbc'
+    'https://discord.gg/lightclubtbc',
+    'Golemagg',
+    'EU'
 );
 
 --INSERT INTO GUILDS (
@@ -43,7 +47,7 @@ insert into users (
 --);
 
 
-insert into vacancies (
+insert into vacancies_guilds (
     guild_id,
     rogue,
     tank
@@ -51,4 +55,15 @@ insert into vacancies (
     1,
     true,
     true
-)
+);
+
+insert into vacancies_players (
+    discord_id,
+    rogue,
+    assassin_rogue
+) values(
+    12345,
+    true,
+    true
+);
+
